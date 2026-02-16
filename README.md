@@ -1,73 +1,113 @@
-# React + TypeScript + Vite
+# Ambler Mining Company
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional corporate website for Ambler Mining Company - responsible mining operations in Alaska's Ambler Mining District.
 
-Currently, two official plugins are available:
+## 🌐 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **GitHub Pages**: https://alaskacg.github.io/ambler-mining-company/
+- **Custom Domains**: 
+  - amblerminingcompany.com
+  - amblermines.com
 
-## React Compiler
+## 🏗️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19 + Vite 8
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Routing**: React Router DOM
+- **SEO**: react-helmet-async with JSON-LD schema
+- **Icons**: Lucide React
 
-## Expanding the ESLint configuration
+## 📄 Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Home** - Hero section, company overview, key statistics
+2. **About** - Company history, leadership team, values, safety commitment
+3. **Projects** - Active mining projects, exploration areas, resource estimates
+4. **Sustainability** - Environmental practices, community involvement, safety record
+5. **Careers** - Job opportunities, benefits, company culture
+6. **Investors** - Financial information, reports, shareholder resources
+7. **Contact** - Multiple contact methods, office locations, contact form
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔍 SEO Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ✅ react-helmet-async for dynamic meta tags
+- ✅ JSON-LD structured data (Corporation, LocalBusiness)
+- ✅ Open Graph tags for social sharing
+- ✅ Twitter Card meta tags
+- ✅ sitemap.xml
+- ✅ robots.txt
+- ✅ Semantic HTML5
+- ✅ Mobile-responsive design
+- ✅ Target keywords: Alaska mining, Ambler mining district, responsible mining Alaska, copper mining Alaska, zinc mining Alaska
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🎨 Design
+
+- Professional corporate aesthetic
+- Blue/gray color scheme with earth tones
+- Mining industry imagery
+- Trust and safety emphasis
+- Fully mobile-responsive
+
+## 🚀 Development
+
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The site automatically deploys to GitHub Pages via GitHub Actions workflow on every push to the `master` branch.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔧 Custom Domain Configuration
+
+To configure custom domains (amblerminingcompany.com, amblermines.com):
+
+1. Add CNAME file to public directory
+2. Configure DNS records:
+   - A records pointing to GitHub Pages IPs
+   - CNAME record for www subdomain
+3. Update repository settings with custom domain
+
+## 📊 Project Structure
+
 ```
+ambler-mining-company/
+├── public/
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── components/
+│   │   ├── Layout.tsx
+│   │   └── SEO.tsx
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   ├── About.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Sustainability.tsx
+│   │   ├── Careers.tsx
+│   │   ├── Investors.tsx
+│   │   └── Contact.tsx
+│   ├── App.tsx
+│   └── main.tsx
+├── .github/workflows/
+│   └── deploy.yml
+└── package.json
+```
+
+## 📝 License
+
+Copyright © 2025 Ambler Mining Company. All rights reserved.
+
+---
+
+Built with ❤️ for responsible mining in Alaska
